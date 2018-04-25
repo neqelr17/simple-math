@@ -56,6 +56,7 @@ void Menu::GetUserChoice()
 		else
 		{
 			is_valid = true;
+			std::cin.ignore(999, '\n');
 		}
 	}
 }

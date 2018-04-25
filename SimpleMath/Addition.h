@@ -9,5 +9,5 @@ public:
 	~Addition();
 
 	void DisplayType();
+	void Solve();
 };
-

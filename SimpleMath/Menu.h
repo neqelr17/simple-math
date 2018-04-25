@@ -22,4 +22,3 @@ public:
 private:
 	MenuOptions menu_choice_;
 };
-

@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include <vector>
 
 class SimpleArrayMath
@@ -9,8 +10,12 @@ public:
 	~SimpleArrayMath();
 
 	void DisplayType();
+	void GetUserInputs();
+	virtual void Solve();
+
+protected:
+	std::vector<double> inputs_;
 
 private:
-	std::vector<double> inputs_;
+	std::string quit_ = "q";
 };
-
