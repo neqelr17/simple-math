@@ -41,14 +41,14 @@ void Menu::GetUserChoice()
 		std::cin >> choice;
 		if (std::cin.fail())
 		{
-			system("cls");
+			//system("cls");
 			std::cout << "Invalid input!\n";
 			std::cin.clear();
 			std::cin.ignore(999, '\n');
 		}
 		else if (!SetMenuChoice(choice))
 		{
-			system("cls");
+			//system("cls");
 			std::cout << "Invalid Menu Option!\n";
 			std::cin.clear();
 			std::cin.ignore(999, '\n');
@@ -70,7 +70,7 @@ void Menu::DisplayMenu()
 	std::cout << " 2) Subtraction\n";
 	std::cout << " 3) Multiplication\n";
 	std::cout << " 4) Division\n";
-	std::cout << " 9) Exit\n";
+	std::cout << "\n 9) Exit\n";
 	std::cout << "------------------------------\n";
 	std::cout << "Enter menu option: ";
 }
