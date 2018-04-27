@@ -21,4 +21,5 @@ public:
 
 private:
 	MenuOptions menu_choice_;
+	int total_choices_;
 };

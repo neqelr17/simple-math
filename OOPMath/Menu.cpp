@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-Menu::Menu()
+Menu::Menu() : total_choices_(0)
 {
 }
 
@@ -13,11 +13,16 @@ Menu::~Menu()
 }
 
 
+//
+// Get the current choice.
 Menu::MenuOptions Menu::GetMenuChoice()
 {
 	return menu_choice_;
 }
 
+
+//
+// Sets the menu choice if valid or returns false.
 bool Menu::SetMenuChoice(int option)
 {
 	if (option > 0 && option <= 4 || option == 9)
@@ -28,6 +33,9 @@ bool Menu::SetMenuChoice(int option)
 	return false;
 }
 
+
+//
+// Gets valid menu choice from the user.
 void Menu::GetUserChoice()
 {
 	int choice = 0;
@@ -57,14 +65,24 @@ void Menu::GetUserChoice()
 		{
 			is_valid = true;
 			std::cin.ignore(999, '\n');
+			total_choices_++;
 		}
 	}
 }
 
 
+//
+// Displays the menu with a count showing solved problems. 
 void Menu::DisplayMenu()
 {
-	std::cout << "\nMenu:\n";
+	if (total_choices_ > 0)
+	{
+		std::cout << "\nMenu:     Problems Entered: " << total_choices_ << std::endl;
+	}
+	else
+	{
+		std::cout << "\nMenu:\n";
+	}
 	std::cout << "------------------------------\n";
 	std::cout << " 1) Addition\n";
 	std::cout << " 2) Subtraction\n";

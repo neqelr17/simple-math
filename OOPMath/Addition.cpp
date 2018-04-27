@@ -16,16 +16,25 @@ Addition::~Addition()
 {
 }
 
+
+//
+// Print calculation type to console.
 void Addition::DisplayType()
 {
 	std::cout << "Addition!\n";
 }
 
+
+//
+// Overloaded calculation method
 double Addition::Solve()
 {
 	return number1_ + number2_;
 }
 
+
+//
+// Create the result string
 std::string Addition::Result()
 {
 	std::stringstream result = std::stringstream();

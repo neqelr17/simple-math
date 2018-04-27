@@ -16,18 +16,24 @@ Division::~Division()
 }
 
 
+//
+// Print calculation type to console.
 void Division::DisplayType()
 {
 	std::cout << "Division!\n";
 }
 
 
+//
+// Overloaded calculation method
 double Division::Solve()
 {
 	return number1_ / number2_;
 }
 
 
+//
+// Create the result string
 std::string Division::Result()
 {
 	std::stringstream result = std::stringstream();
@@ -36,6 +42,9 @@ std::string Division::Result()
 }
 
 
+//
+// Overload of the base class to add special terms for division.
+// aka Numberator and Denomiator
 void Division::SetNumbers()
 {
 	number1_ = GetNumberFromUser("Numerator");
@@ -43,6 +52,9 @@ void Division::SetNumbers()
 }
 
 
+//
+// Override of teh base class to not allow zero to be entered for the denomiator
+// to prevent a divide by zero error.
 double Division::GetNumberFromUser(std::string type)
 {
 	bool keep_going = true;

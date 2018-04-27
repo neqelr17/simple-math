@@ -17,12 +17,17 @@ SimpleMath::~SimpleMath()
 {
 }
 
+//
+// Print calculation type to console.
 void SimpleMath::DisplayType()
 {
 	std::cout << "SimpleArrayMath!\n";
 }
 
 
+//
+// Get numbers to use in the calculation from the user.
+// Validates input and asks for correct input if input was invalid.
 double SimpleMath::GetNumberFromUser()
 {
 	bool keep_going = true;
@@ -50,6 +55,9 @@ double SimpleMath::GetNumberFromUser()
 	return number;
 }
 
+
+//
+// Set the private numbers.
 void SimpleMath::SetNumbers()
 {
 	number1_ = GetNumberFromUser();
@@ -57,11 +65,16 @@ void SimpleMath::SetNumbers()
 }
 
 
+//
+// Virutal method to be implemented in derived classes.
 double SimpleMath::Solve()
 {
 	return 0.0;
 }
 
+
+//
+// Virutal method to be implemented in derived classes.
 std::string SimpleMath::Result()
 {
 	return "";

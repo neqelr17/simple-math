@@ -15,18 +15,24 @@ Multiplication::~Multiplication()
 }
 
 
+//
+// Print calculation type to console.
 void Multiplication::DisplayType()
 {
 	std::cout << "Multiplication!\n";
 }
 
 
+//
+// Overloaded calculation method
 double Multiplication::Solve()
 {
 	return number1_ * number2_;
 }
 
 
+//
+// Create the result string
 std::string Multiplication::Result()
 {
 	std::stringstream result = std::stringstream();
